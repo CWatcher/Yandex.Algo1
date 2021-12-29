@@ -1,7 +1,10 @@
-	№	Вердикт	Ресурсы	Баллы
-	1	ok	163ms / 10.91Mb	-
-	2	ok	165ms / 10.92Mb	-
-	3	ok	163ms / 11.00Mb	-
-	4	ok	161ms / 11.00Mb	-
-	5	ok	163ms / 10.97Mb	-
-	6	wrong-answer	164ms / 10.94Mb	-
+№	Вердикт	Ресурсы	Баллы
+	1	ok	163ms / 11.02Mb	-
+	2	ok	164ms / 10.93Mb	-
+	3	ok	164ms / 10.94Mb	-
+	4	ok	164ms / 10.95Mb	-
+	5	ok	164ms / 10.97Mb	-
+	6	ok	164ms / 10.93Mb	-
+	7	ok	165ms / 10.92Mb	-
+	8	ok	164ms / 10.92Mb	-
+	9	wrong-answer	164ms / 10.93Mb	-
