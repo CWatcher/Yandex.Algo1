@@ -14,6 +14,15 @@ public class Main {
 			System.out.println("-1\n-1");
 			System.exit(1);
 		};
+		if ( n2 == 1 ) {
+			System.out.println(0);
+			if ( m == 1 ) {
+				System.out.println(1);
+				System.exit(3);
+			}
+			System.out.println(0);
+			System.exit(2);
+		}
 		int k_n = (int) (int)Math.ceil( dk_n );
 		int k_p = k_n * m;
 
