@@ -18,8 +18,6 @@ public class Main {
 		int FT2 = (S2 - 1) * Fs + F2;
 		if ( A2 < FT2 || F2 > Fs )
 			exit("-1 -1");
-		if ( A1 == A2 )
-			exit(S2 + " " + F2);
 		int AfL = A2 / FT2;
 		if ( A2 % FT2 != 0 )
 			AfL++;
