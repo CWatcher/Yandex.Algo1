@@ -23,10 +23,7 @@ public class Main {
 		int AfL = A2 / FT2;
 		if ( A2 % FT2 != 0 )
 			AfL++;
-		int AfH = 1_000_001;
-		if (FT2 > 1)
-			AfH = (A2 - 1) / (FT2 - 1);
-		if ( S2 == 1 && F2 == 1 ) {
+		if ( FT2 == 1 ) {
 			if (A1 <= A2 || A1 <= AfL * Fs )
 				System.out.println(1);
 			else
@@ -37,6 +34,9 @@ public class Main {
 				System.out.println(0);
 			return;
 		}
+		int AfH = (A2 - 1) / (FT2 - 1);
+		if ( AfL > AfH )
+			exit("-1 -1");
 		int AsL = AfL * Fs;
 		int AsH = AfH * Fs;
 		int S1L = (int)Math.ceil( (double)A1 / AsL );
