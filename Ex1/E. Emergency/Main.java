@@ -13,8 +13,6 @@ public class Main {
 		int S2 = sc.nextInt();
 		int F2 = sc.nextInt();
 
-		if ( A1 == 1 )
-			exit("1 1");
 		int FT2 = (S2 - 1) * Fs + F2;
 		if ( A2 < FT2 || F2 > Fs )
 			exit("-1 -1");
@@ -23,9 +21,9 @@ public class Main {
 			AfL++;
 		if ( FT2 == 1 ) {
 			if (A1 <= A2 || A1 <= AfL * Fs )
-				System.out.println(1);
+				System.out.print(1 + " ");
 			else
-				System.out.println(0);
+				System.out.print(0 + " ");
 			if ( A1 <= A2 || Fs == 1 )
 				System.out.println(1);
 			else
@@ -42,7 +40,7 @@ public class Main {
 		if ( S1L == S1H )
 			System.out.print(S1L + " ");
 		else
-			System.out.println(0 + " ");
+			System.out.print(0 + " ");
 		int F1L = (int)Math.ceil( (double)(A1 - (S1L - 1) * AsL) / AfL );
 		int F1H = (int)Math.ceil( (double)(A1 - (S1H - 1) * AsH) / AfH );
 		if ( F1L == F1H )
