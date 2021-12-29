@@ -14,12 +14,12 @@ public class Main {
 		int F2 = sc.nextInt();
 
 		if ( A1 == 1 )
-			exit("1\n1");
+			exit("1 1");
 		int FT2 = (S2 - 1) * Fs + F2;
 		if ( A2 < FT2 || F2 > Fs )
-			exit("-1\n-1");
+			exit("-1 -1");
 		if ( A1 == A2 )
-			exit(S2 + "\n" + F2);
+			exit(S2 + " " + F2);
 		int AfL = A2 / FT2;
 		if ( A2 % FT2 != 0 )
 			AfL++;
@@ -37,12 +37,19 @@ public class Main {
 				System.out.println(0);
 			return;
 		}
-		if ( AfL != AfH )
-			exit("-1\n-1");
-		int Af = AfL;
-		int As = Af * Fs;
-		int S1 = (int)Math.ceil( (double)A1 / As );
-		int F1 = (int)Math.ceil( (double)(A1 - (S1 - 1) * As) / Af );
-		System.out.printf("%d\n%d\n", S1, F1);
+		int AsL = AfL * Fs;
+		int AsH = AfH * Fs;
+		int S1L = (int)Math.ceil( (double)A1 / AsL );
+		int S1H = (int)Math.ceil( (double)A1 / AsH );
+		if ( S1L == S1H )
+			System.out.print(S1L + " ");
+		else
+			System.out.println(0 + " ");
+		int F1L = (int)Math.ceil( (double)(A1 - (S1L - 1) * AsL) / AfL );
+		int F1H = (int)Math.ceil( (double)(A1 - (S1H - 1) * AsH) / AfH );
+		if ( F1L == F1H )
+			System.out.println(F1L);
+		else
+			System.out.println(0);
 	}
 }
