@@ -12,16 +12,16 @@ public class Main {
 		double dk_n = (double)k2 / ((p2 - 1) * m + n2);
 		if ( dk_n < 1 ) {
 			System.out.println("-1\n-1");
-			System.exit(1);
+			System.exit(0);
 		};
 		if ( n2 == 1 ) {
 			System.out.println(0);
 			if ( m == 1 ) {
 				System.out.println(1);
-				System.exit(3);
+				System.exit(0);
 			}
 			System.out.println(0);
-			System.exit(2);
+			System.exit(0);
 		}
 		int k_n = (int) (int)Math.ceil( dk_n );
 		int k_p = k_n * m;

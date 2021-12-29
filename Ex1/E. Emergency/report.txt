@@ -1,3 +1,5 @@
 №	Вердикт	Ресурсы	Баллы
-	1	ok	162ms / 10.98Mb	-
-	2	runtime-error	158ms / 10.91Mb	-
+	1	ok	164ms / 10.88Mb	-
+	2	ok	159ms / 10.91Mb	-
+	3	ok	159ms / 10.91Mb	-
+	4	wrong-answer	159ms / 10.93Mb	-
