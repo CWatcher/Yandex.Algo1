@@ -14,13 +14,15 @@ public class Main {
 			System.out.println("-1\n-1");
 			System.exit(0);
 		};
-		if ( n2 == 1 ) {
-			System.out.println(0);
-			if ( m == 1 ) {
+		if ( p2 == 1 && n2 == 1 ) {
+			if (k1 <= k2)
 				System.out.println(1);
-				System.exit(0);
-			}
-			System.out.println(0);
+			else
+				System.out.println(0);
+			if ( k1 <= k2 || m == 1 )
+				System.out.println(1);
+			else
+				System.out.println(0);
 			System.exit(0);
 		}
 		int k_n = (int) (int)Math.ceil( dk_n );
