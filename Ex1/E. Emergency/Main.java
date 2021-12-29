@@ -10,7 +10,7 @@ public class Main {
 		int n2 = sc.nextInt();
 
 		double dk_n = (double)k2 / ((p2 - 1) * m + n2);
-		if ( dk_n < 1 ) {
+		if ( k2 < (p2 - 1) * m + n2 || n2 > m ) {
 			System.out.println("-1\n-1");
 			System.exit(0);
 		};
