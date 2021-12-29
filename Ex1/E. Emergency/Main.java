@@ -1,40 +1,48 @@
 import java.util.Scanner;
 
 public class Main {
+	static void exit(String s) {
+		System.out.println(s);
+		System.exit(0);
+	}
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int k1 = sc.nextInt();
-		int m = sc.nextInt();
-		int k2 = sc.nextInt();
-		int p2 = sc.nextInt();
-		int n2 = sc.nextInt();
+		int A1 = sc.nextInt();
+		int Fs = sc.nextInt();
+		int A2 = sc.nextInt();
+		int S2 = sc.nextInt();
+		int F2 = sc.nextInt();
 
-		if ( k1 == 1) {
-			System.out.println("1\n1");
-			return;
-		}
-		double dk_n = (double)k2 / ((p2 - 1) * m + n2);
-		if ( k2 < (p2 - 1) * m + n2 || n2 > m ) {
-			System.out.println("-1\n-1");
-			return;
-		};
-		if ( p2 == 1 && n2 == 1 ) {
-			if (k1 <= k2 || k1 <= m )
+		if ( A1 == 1 )
+			exit("1\n1");
+		int FT2 = (S2 - 1) * Fs + F2;
+		if ( A2 < FT2 || F2 > Fs )
+			exit("-1\n-1");
+		if ( A1 == A2 )
+			exit(S2 + "\n" + F2);
+		int AfL = A2 / FT2;
+		if ( A2 % FT2 != 0 )
+			AfL++;
+		int AfH = 1_000_001;
+		if (FT2 > 1)
+			AfH = (A2 - 1) / (FT2 - 1);
+		if ( S2 == 1 && F2 == 1 ) {
+			if (A1 <= A2 || A1 <= AfL * Fs )
 				System.out.println(1);
 			else
 				System.out.println(0);
-			if ( k1 <= k2 || m == 1 )
+			if ( A1 <= A2 || Fs == 1 )
 				System.out.println(1);
 			else
 				System.out.println(0);
 			return;
 		}
-		int k_n = (int) (int)Math.ceil( dk_n );
-		int k_p = k_n * m;
-
-		int p1 = (int)Math.ceil( (double)k1 / k_p );
-		int n1 = (int)Math.ceil( (double)(k1 - (p1 - 1) * k_p) / k_n );
-
-		System.out.printf("%d\n%d\n", p1, n1);
+		if ( AfL != AfH )
+			exit("-1\n-1");
+		int Af = AfL;
+		int As = Af * Fs;
+		int S1 = (int)Math.ceil( (double)A1 / As );
+		int F1 = (int)Math.ceil( (double)(A1 - (S1 - 1) * As) / Af );
+		System.out.printf("%d\n%d\n", S1, F1);
 	}
 }
