@@ -8,9 +8,9 @@ public class Main {
 		SortedSet<Integer> sides = new TreeSet<>();
 		for (int i = 0; i < 3; i++)
 			sides.add(sc.nextInt());
-		if (sides.last() >= sides.headSet(sides.last()).stream().mapToInt(x -> x).sum())
-			System.out.println("NO");
-		else
+		if (sides.headSet(sides.last()).stream().mapToInt(x -> x).sum() > sides.last())
 			System.out.println("YES");
+		else
+			System.out.println("NO");
 	}
 }
