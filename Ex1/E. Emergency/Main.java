@@ -15,7 +15,7 @@ public class Main {
 			System.exit(0);
 		};
 		if ( p2 == 1 && n2 == 1 ) {
-			if (k1 <= k2)
+			if (k1 <= k2 || k1 <= m )
 				System.out.println(1);
 			else
 				System.out.println(0);
