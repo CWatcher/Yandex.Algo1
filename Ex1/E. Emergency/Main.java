@@ -9,10 +9,14 @@ public class Main {
 		int p2 = sc.nextInt();
 		int n2 = sc.nextInt();
 
+		if ( k1 == 1) {
+			System.out.println("1\n1");
+			return;
+		}
 		double dk_n = (double)k2 / ((p2 - 1) * m + n2);
 		if ( k2 < (p2 - 1) * m + n2 || n2 > m ) {
 			System.out.println("-1\n-1");
-			System.exit(0);
+			return;
 		};
 		if ( p2 == 1 && n2 == 1 ) {
 			if (k1 <= k2 || k1 <= m )
@@ -23,7 +27,7 @@ public class Main {
 				System.out.println(1);
 			else
 				System.out.println(0);
-			System.exit(0);
+			return;
 		}
 		int k_n = (int) (int)Math.ceil( dk_n );
 		int k_p = k_n * m;
