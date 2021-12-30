@@ -3,11 +3,9 @@ import java.util.Scanner;
 public class Main {
 	static String extractNum( String s ) {
 		s = s.replaceAll("\\D+", "");
-		if ( s.length() == 11 )
-			s = s.substring(1);
-		else
-			s = "495" + s;
-		return s;
+		if ( s.length() == 7 )
+			return "495" + s;
+		return s.substring(1);
 	}
 
 	public static void main( String[] args ) {
