@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Ex1/A. Air conditioner/A. Air conditioner.iml" filepath="$PROJECT_DIR$/Ex1/A. Air conditioner/A. Air conditioner.iml" />
       <module fileurl="file://$PROJECT_DIR$/Ex1/B. Triangle/B. Triangle.iml" filepath="$PROJECT_DIR$/Ex1/B. Triangle/B. Triangle.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Ex1/C. Phone numbers/C. Phone numbers.iml" filepath="$PROJECT_DIR$/Ex1/C. Phone numbers/C. Phone numbers.iml" />
       <module fileurl="file://$PROJECT_DIR$/Ex1/E. Ambulance/E. Ambulance.iml" filepath="$PROJECT_DIR$/Ex1/E. Ambulance/E. Ambulance.iml" />
       <module fileurl="file://$PROJECT_DIR$/Ex1/Ex1.iml" filepath="$PROJECT_DIR$/Ex1/Ex1.iml" />
     </modules>
