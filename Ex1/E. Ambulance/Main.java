@@ -16,9 +16,7 @@ public class Main {
 		int LT2 = (S2 - 1) * Ls + L2; // LevelTotal2
 		if ( A2 < LT2 || L2 > Ls )
 			exit("-1 -1");
-		int AlL = A2 / LT2; // Apartments per level Low
-		if ( A2 % LT2 != 0 )
-			AlL++;
+		int AlL = (int)Math.ceil( (double)A2 / LT2 ); // Apartments per level Low
 		if ( LT2 == 1 ) {
 			if (A1 <= A2 || A1 <= AlL * Ls )
 				System.out.print(1 + " ");
