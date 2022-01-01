@@ -15,7 +15,7 @@ public static void main(String[] args) {
 	int t2Max = (n2 + 1) * i2 - p;
 	int tMin = Math.max( t1Min, t2Min );
 	int tMax = Math.min( t1Max, t2Max );
-	if ( tMin < tMax )
+	if ( tMin <= tMax )
 		System.out.println( tMin + " " + tMax );
 	else
 		System.out.println( -1 );

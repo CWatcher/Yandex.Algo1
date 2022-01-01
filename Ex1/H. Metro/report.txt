@@ -1,4 +1,23 @@
 №	Вердикт	Ресурсы	Баллы
-	1	ok	127ms / 12.40Mb	-
-	2	ok	128ms / 12.32Mb	-
-	3	wrong-answer	128ms / 12.32Mb	-
+	1	ok	123ms / 12.33Mb	-
+	2	ok	119ms / 12.19Mb	-
+	3	ok	120ms / 12.14Mb	-
+	4	ok	119ms / 12.15Mb	-
+	5	ok	120ms / 12.29Mb	-
+	6	ok	122ms / 12.40Mb	-
+	7	ok	120ms / 12.13Mb	-
+	8	ok	121ms / 12.28Mb	-
+	9	ok	119ms / 12.15Mb	-
+	10	ok	120ms / 12.28Mb	-
+	11	ok	120ms / 12.14Mb	-
+	12	ok	120ms / 12.13Mb	-
+	13	ok	120ms / 12.13Mb	-
+	14	ok	120ms / 12.29Mb	-
+	15	ok	120ms / 12.14Mb	-
+	16	ok	120ms / 12.13Mb	-
+	17	ok	120ms / 12.14Mb	-
+	18	ok	120ms / 12.13Mb	-
+	19	ok	120ms / 12.13Mb	-
+	20	ok	120ms / 12.14Mb	-
+	21	ok	121ms / 12.29Mb	-
+	22	ok	120ms / 12.14Mb	-
