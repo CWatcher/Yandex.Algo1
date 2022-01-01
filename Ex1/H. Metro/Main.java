@@ -11,8 +11,8 @@ public static void main(String[] args) {
 	int n2 = sc.nextInt();
 	int t1Min = (n1 - 1) * i1 + p;
 	int t2Min = (n2 - 1) * i2 + p;
-	int t1Max = n1 * i1 + p;
-	int t2Max = n2 * i2 + p;
+	int t1Max = (n1 + 1) * i1 - p;
+	int t2Max = (n2 + 1) * i2 - p;
 	int tMin = Math.max( t1Min, t2Min );
 	int tMax = Math.min( t1Max, t2Max );
 	if ( tMin < tMax )
