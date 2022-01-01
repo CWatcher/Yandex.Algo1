@@ -4,15 +4,15 @@ public class Main {
 
 public static void main(String[] args) {
 	Scanner sc = new Scanner( System.in );
-	int p = 1;
-	int i1 = sc.nextInt() + p;
-	int i2 = sc.nextInt() + p;
+	int tTrain = 1;
+	int tWait1 = sc.nextInt();
+	int tWait2 = sc.nextInt();
 	int n1 = sc.nextInt();
 	int n2 = sc.nextInt();
-	int t1Min = (n1 - 1) * i1 + p;
-	int t2Min = (n2 - 1) * i2 + p;
-	int t1Max = (n1 + 1) * i1 - p;
-	int t2Max = (n2 + 1) * i2 - p;
+	int t1Min = n1 * tTrain + (n1 - 1) * tWait1;
+	int t2Min = n2 * tTrain + (n2 - 1) * tWait2;
+	int t1Max = n1 * tTrain + (n1 + 1) * tWait1;
+	int t2Max = n2 * tTrain + (n2 + 1) * tWait2;
 	int tMin = Math.max( t1Min, t2Min );
 	int tMax = Math.min( t1Max, t2Max );
 	if ( tMin <= tMax )
@@ -22,3 +22,12 @@ public static void main(String[] args) {
 }
 
 }
+/*
+1s 3trains
+min t-t-t = 5
+max -t-t-t- = 7
+
+3s 2trains
+min t---t = 5
+max ---t---t--- = 11
+*/
