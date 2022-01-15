@@ -2,22 +2,28 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 public class Main {
-static Scanner sc = new Scanner( System.in );
-static int[] scanInts( int length ) {
+
+public static void main( String[] args ) {
+	new Main().solve();
+}
+Scanner sc = new Scanner( System.in );
+int[] brick = scanInts( 3 );
+int[] hole = scanInts( 2 );
+
+int[] scanInts( int length ) {
 	int[] a = new int[ length ];
 	for ( int i = 0; i < a.length; i ++ )
 		a[ i ] = sc.nextInt();
 	Arrays.sort( a );
 	return a;
 }
-public static void main( String[] args ) {
-	int[] brick = scanInts( 3 );
-	int[] hole = scanInts( 2 );
+void solve() {
 	if ( brick[0] <= hole[0] && brick[1] <= hole[1] )
-		System.out.println( "YES");
+		System.out.println( "YES" );
 	else
-		System.out.println( "NO");
+		System.out.println( "NO" );
 }
+
 }
 /*
 1 2 3
