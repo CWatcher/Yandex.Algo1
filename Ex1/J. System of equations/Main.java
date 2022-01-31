@@ -32,7 +32,18 @@ y = (c1 a2 - c2 a1) / (a1 b2 - a2 b1) = dy / d
 	double dy = a1 * c2 - a2 * c1;
 	double  x = dx / d;
 	double  y = dy / d;
-	if ( d == 0 ) {
+/*
+2. единственное решение (x0,y0),
+значения x0 и y0
+x + 0y = 0
+0x + y = 0
+
+d = 1
+x = 0
+y = 0
+*/
+	if ( d != 0 )
+		System.out.println("2 "	+ x + " " + y );
 /*
 0. нет решений
 x + y = 0
@@ -45,9 +56,11 @@ y = (0 - 1) / 0 = -inf
 x + 0y = 0
 x + 0y = 1
 */
+	else {
 		if ( dx != 0 || dy != 0 )
 			System.out.println( 0 );
-/* 1. бесконечно много решений вида y=kx+b,
+/*
+1. бесконечно много решений вида y=kx+b,
 значения k и b.
  x + 2y = 1
 2x + 4y = 2
@@ -77,9 +90,9 @@ x + 0y = 1
 x = c1 / a1 = c2 / a2
 */
 		else if ( a1 != 0 )
-				System.out.println("3 " + c1 / a1 );
+			System.out.println("3 " + c1 / a1 );
 		else if ( a2 != 0 )
-				System.out.println("3 " + c2 / a2 );
+			System.out.println("3 " + c2 / a2 );
 
 /* 4. бесконечно много решений вида y=y0, x — любое,
 значение y0
@@ -87,9 +100,9 @@ x = c1 / a1 = c2 / a2
 0x + y = 1
 */
 		else if ( b1 != 0 )
-				System.out.println("4 " + c1 / b1 );
+			System.out.println("4 " + c1 / b1 );
 		else if ( b2 != 0 )
-				System.out.println("4 " + c2 / b2 );
+			System.out.println("4 " + c2 / b2 );
 
 /*
 5. любая пара чисел (x,y) является решением
@@ -106,17 +119,6 @@ x = c1 / a1 = c2 / a2
 		else
 			System.out.println( 0 );
 	}
-/*2. единственное решение (x0,y0),
-значения x0 и y0
-x + 0y = 0
-0x + y = 0
-
-d = 1
-x = 0
-y = 0
-*/
-	else
-		System.out.println("2 "	+ x + " " + y );
 }
 
 }
