@@ -47,17 +47,6 @@ x + 0y = 1
 */
 		if ( dx != 0 || dy != 0 )
 			System.out.println( 0 );
-		else if ( a1 == 0 && b1 == 0 && a2 == 0 && b2 == 0 ) {
-			if ( c1 != 0 || c2 != 0 )
-				System.out.println( 0 );
-/*
-5. любая пара чисел (x,y) является решением
-0x + 0y = 0
-0x + 0y = 0
-*/
-			else
-				System.out.println( 5 );
-		}
 /* 1. бесконечно много решений вида y=kx+b,
 значения k и b.
  x + 2y = 1
@@ -102,6 +91,20 @@ x = c1 / a1 = c2 / a2
 		else if ( b2 != 0 )
 				System.out.println("4 " + c2 / b2 );
 
+/*
+5. любая пара чисел (x,y) является решением
+0x + 0y = 0
+0x + 0y = 0
+*/
+		else if ( c1 == 0 && c2 == 0 )
+			System.out.println( 5 );
+/*
+0. нет решений
+0 0 0
+0 0 1
+*/
+		else
+			System.out.println( 0 );
 	}
 /*2. единственное решение (x0,y0),
 значения x0 и y0
