@@ -31,7 +31,7 @@ y = (a2 b0 - b2 a0) / (a0 b1 - b0 a1) = dy / d
 */
 	double d  = a[0] * b[1] - b[0] * a[1];
 	double dx = a[2] * b[1] - b[2] * a[1];
-	double dy = a[2] * b[0] - b[2] * a[0];
+	double dy = a[0] * b[2] - b[0] * a[2];
 	Double x = dx / d;
 	Double y = dy / d;
 	if ( d == 0 ) {
@@ -44,22 +44,22 @@ d = 0
 x = (0 - 1) / 0 = -inf
 y = (0 - 1) / 0 = -inf
 
-0x + 0y = 0
-0x + 0y = 1
+x + 0y = 0
+x + 0y = 1
 */
 		if ( dx != 0 || dy != 0 )
 			System.out.println( 0 );
 		else if ( a[0] == 0 && a[1] == 0 && b[0] == 0 && b[1] == 0 ) {
+/*
+0x + 0y = 0
+0x + 0y = 1
+*/
 			if ( a[2] != 0 || b[2] != 0 )
 				System.out.println( 0 );
 /*
 5. любая пара чисел (x,y) является решением
 0x + 0y = 0
 0x + 0y = 0
-
-d = 0
-x = nan
-y = nan
 */
 			else
 				System.out.println( 5 );
@@ -68,10 +68,6 @@ y = nan
 значения k и b.
  x + 2y = 1
 2x + 4y = 2
-
-d = 0
-x = (4 - 4) / 0 = nan
-y = (2 - 2) / 0 = nan
 
 0x + 0y = 0
 2x + 4y = 2
@@ -92,24 +88,25 @@ b =  a2 / a1 =   b2 / b1
 x + 0y = 1
 x + 0y = 1
 
-d = 0
-x = (1*0 - 1*0) / 0 = nan
-y = (1 - 1) / 0 = nan
-
 0x + 0y = 0
 2x + 0y = 1
 
 x = a[2] / a[0] = b[2] / b[0]
 */
+		else if ( a[0] != 0 )
+				System.out.println("3 " + a[2] / a[0] );
+		else if ( b[0] != 0 )
+				System.out.println("3 " + b[2] / b[0] );
+
 /* 4. бесконечно много решений вида y=y0, x — любое,
 значение y0
 0x + y = 1
 0x + y = 1
-
-d = 0
-x = (1 - 1) / 0 = nan
-y = (1*0 - 1*0) / 0 = nan
 */
+		else if ( a[1] != 0 )
+				System.out.println("4 " + a[2] / a[1] );
+		else if ( b[1] != 0 )
+				System.out.println("4 " + b[2] / b[1] );
 
 	}
 /*2. единственное решение (x0,y0),
@@ -121,6 +118,8 @@ d = 1
 x = 0
 y = 0
 */
+	else
+		System.out.println("2 "	+ x + " " + y );
 }
 
 }

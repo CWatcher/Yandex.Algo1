@@ -11,11 +11,19 @@ class MainTest {
 //@org.junit.jupiter.api.Test
 @Test
 void test() {
-	test("1 1 0    1 1 1", "0");
+	test("0,1 1 0    0,1 1 1", "0");
 	test("0 0 0    0 0 1", "0");
+	test("1 0 0    1 0 2", "0");
+	test("0 1 0    0 1 2", "0");
 	test("0 0 0    0 0 0", "5");
 	test("1 2 1    2 4 2", "1 -0.5 0.5");
 	test("0 0 0   -2 1 3", "1 2.0 3.0");
+	test("1 0 0   -2 0 0", "3 0.0");
+	test("0 0 0   -1 0 2", "3 -2.0");
+	test("0 1 0    0 2 0", "4 0.0");
+	test("0 0 0    0 -1 1,1", "4 -1.1");
+	test("1 0 0    0 1 0", "2 0.0 0.0");
+	test("1 1 1   -1 1 2", "2 -0.5 1.5");
 }
 
 void test( String input, String output ) {
