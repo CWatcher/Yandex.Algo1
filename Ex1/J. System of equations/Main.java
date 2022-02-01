@@ -56,8 +56,7 @@ y = (0 - 1) / 0 = -inf
 x + 0y = 0
 x + 0y = 1
 */
-	else {
-		if ( dx != 0 || dy != 0 )
+	else if ( dx != 0 || dy != 0 )
 			System.out.println( 0 );
 /*
 1. бесконечно много решений вида y=kx+b,
@@ -74,10 +73,10 @@ b2 y = -a2 x + c2
 k = -a1 / b1 = - a2 / b2
 b =  c1 / b1 =   c2 / b2
 */
-		else if ( a1 * b1 != 0 )
-			System.out.println("1 " + -a1 / b1 + " " + c1 / b1);
-		else if ( a2 * b2 != 0 )
-			System.out.println("1 " + -a2 / b2 + " " + c2 / b2);
+	else if ( a1 * b1 != 0 )
+		System.out.println("1 " + -a1 / b1 + " " + c1 / b1);
+	else if ( a2 * b2 != 0 )
+		System.out.println("1 " + -a2 / b2 + " " + c2 / b2);
 /*
 3. бесконечно много решений вида x=x0, y — любое,
 значение x0.
@@ -89,36 +88,35 @@ x + 0y = 1
 
 x = c1 / a1 = c2 / a2
 */
-		else if ( a1 != 0 )
-			System.out.println("3 " + c1 / a1 );
-		else if ( a2 != 0 )
-			System.out.println("3 " + c2 / a2 );
+	else if ( a1 != 0 )
+		System.out.println("3 " + c1 / a1 );
+	else if ( a2 != 0 )
+		System.out.println("3 " + c2 / a2 );
 
 /* 4. бесконечно много решений вида y=y0, x — любое,
 значение y0
 0x + y = 1
 0x + y = 1
 */
-		else if ( b1 != 0 )
-			System.out.println("4 " + c1 / b1 );
-		else if ( b2 != 0 )
-			System.out.println("4 " + c2 / b2 );
+	else if ( b1 != 0 )
+		System.out.println("4 " + c1 / b1 );
+	else if ( b2 != 0 )
+		System.out.println("4 " + c2 / b2 );
 
 /*
 5. любая пара чисел (x,y) является решением
 0x + 0y = 0
 0x + 0y = 0
 */
-		else if ( c1 == 0 && c2 == 0 )
-			System.out.println( 5 );
+	else if ( c1 == 0 && c2 == 0 )
+		System.out.println( 5 );
 /*
 0. нет решений
 0 0 0
 0 0 1
 */
-		else
-			System.out.println( 0 );
-	}
+	else
+		System.out.println( 0 );
 }
 
 }
